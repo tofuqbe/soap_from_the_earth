@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  background-color: var(--grey);
   color: #363636;
   font-size: 16px;
   height: 100%;
@@ -24,6 +23,8 @@ body {
 
 .content {
   flex: 1 0 auto;
+  background-color: var(--grey);
+  padding: 0px 0px 100px 0px;
 }
 /* End of Preset CSS */
 
@@ -102,13 +103,13 @@ body {
 /* Start of CSS Variables */
   :root {
     --black: hsl(0, 20%, 2%);
-    --blackhighlight: hsl(0, 0%, 0%);
+    --blackhighlight: hsl(0, 0%, 30%);
     --white: hsl(0, 0%, 100%);
     --whitehighlight: hsl(0, 0%, 83%);
-    --grey: hsl(0, 0%, 81%);
+    --grey: hsl(30, 23%, 95%);
     --60: hsl(17, 50%, 40%);
     --30: hsl(219, 100%, 73%);
-    --10: hsl(217, 100%, 35%);
+    --10: hsl(258, 86%, 86%);
   }
 /* End of CSS Variables */
 
@@ -127,6 +128,10 @@ a:hover, button {
 }
 
 /* End of General CSS */
+
+/* Start of Animations */
+  /* Create hover effect on email subscribe. */
+/* End of Animations */
 
 /* Start of Nav Section */
 
@@ -148,6 +153,10 @@ a:hover, button {
     color: var(--black);
   }
 
+  nav a:hover {
+    color: var(--blackhighlight)
+  }
+
   .logo {
     height: 140px;
   }
@@ -163,12 +172,14 @@ a:hover, button {
 
   .nav-btn {
     padding: 8px;
-  }
-
-  .nav-btn {
     border: none;
     color: white;
     background-color: hsla(17, 50%, 40%, 0.9);
+    transition: background-color 200ms ease-in-out;
+  }
+
+  .nav-btn:hover {
+    background-color: hsla(17, 50%, 60%, 0.9);
   }
 
   
@@ -182,36 +193,33 @@ a:hover, button {
   background-position-y: 35%;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .hero-inner {
   position: relative;
-  height: fit-content;
-  width: fit-content;
+  top: 13vmin;
+  width: 70vmin;
+  padding: 4vmax 16px;
+  background-color: white;
+  border-radius: 12px;
   margin: 0 auto;
 
 }
 
 .call-to-action {
-  margin-top: -500px;
-  margin-left: -400px;
-  position: absolute;
-  padding: 40px;
+  padding: 20px 40px;
   border-radius: 12px;
   background-color: rgb(255, 255, 255);
-  display: grid;
-  grid-template-columns: 60% 40%;
-  width: 800px;
 }
 
 .hero-inner h1 {
   width: 100%;
  color: var(--30);
+ margin-bottom: 20px;
 }
 
 label {
-  color: var(--10)
+  color: var(--black)
 }
 
 form input {
@@ -246,6 +254,7 @@ form input {
 }
 
 .grid-text h3 {
+  color: var(--30);
   margin: 20px 0px;
 }
 
@@ -275,10 +284,9 @@ form input {
 
 /* Start of Footer */
 .footer-container {
-  background-color: var(--60);
+  background-color: hsla(17, 50%, 60%, 0.9);
   height: 200px;
   padding: 20px 16px;
-  color: var(--black);
 }
 
 footer {
