@@ -19,7 +19,7 @@ body {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  padding-top: 140px;
+  padding-top: 140px; 
 }
 
 .content {
@@ -101,7 +101,7 @@ body {
 
 /* Start of CSS Variables */
   :root {
-    --black: hsl(0, 0%, 0%);
+    --black: hsl(0, 20%, 2%);
     --blackhighlight: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --whitehighlight: hsl(0, 0%, 83%);
@@ -119,7 +119,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 a:hover, button {
@@ -145,7 +145,7 @@ a:hover, button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    color: var(--black);
   }
 
   .logo {
@@ -163,6 +163,12 @@ a:hover, button {
 
   .nav-btn {
     padding: 8px;
+  }
+
+  .nav-btn {
+    border: none;
+    color: white;
+    background-color: hsla(17, 50%, 40%, 0.9);
   }
 
   
@@ -209,7 +215,7 @@ label {
 }
 
 form input {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 4px;
   padding: 4px;
   width: 100%;
@@ -221,7 +227,8 @@ form input {
 .main-section {
   height: fit-content;
   width: 100%;
-  padding: 40px 16px;
+  padding: 40px 0px;
+  color: var(--black);
 }
 .main-section section {
   margin: 0 auto;
@@ -234,11 +241,20 @@ form input {
   padding: 20px 0px;
 }
 
+.grid-text {
+  padding: 80px 16px;
+}
+
+.grid-text h3 {
+  margin: 20px 0px;
+}
+
 .grid-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 20px;
-  column-gap: 20px;
+  row-gap: 12px;
+  column-gap: 12px;
+  padding: 0px 16px;
   background-color: var(--white);
   margin: 0 auto;
 }
@@ -259,9 +275,10 @@ form input {
 
 /* Start of Footer */
 .footer-container {
-  background-color: rgb(153, 138, 138);
+  background-color: var(--60);
   height: 200px;
   padding: 20px 16px;
+  color: var(--black);
 }
 
 footer {
