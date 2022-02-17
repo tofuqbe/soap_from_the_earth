@@ -19,6 +19,7 @@ body {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
+  padding-top: 140px;
 }
 
 .content {
@@ -135,11 +136,12 @@ a:hover, button {
   position: fixed;
   background: var(--white);
   z-index: 10;
+  top: 0;
 }
 
   nav {
     height: 100%;
-    margin: 0 auto;
+    margin: 0 auto; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,7 +171,7 @@ a:hover, button {
 /* Start of Hero Section */
 .hero-image {
   width: 100%;
-  height: 80vh;
+  height: calc(80vh - 140px);
   background-image: url("../images/vecteezy_background-of-soil-with-the-word-earth_2488015.jpeg");
   background-position-y: 35%;
   background-repeat: no-repeat;
