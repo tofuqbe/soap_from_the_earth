@@ -1,3 +1,4 @@
+/* Start of Preset CSS */
 html {
   height: 100%;
   box-sizing: border-box;
@@ -11,13 +12,266 @@ html {
 }
 
 body {
-  background-color: #e0e0e0;
+  background-color: var(--grey);
   color: #363636;
+  font-size: 16px;
+  height: 100%;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+/* End of Preset CSS */
+
+/* Start of Fonts */
+@font-face {
+  font-family: "IBMPlexSerif-Bold.ttf";
+  src: url("../fonts/IBMPlexSerif-Bold.ttf");
+}
+@font-face {
+  font-family: "IBMPlexSerif-SemiBold.ttf";
+  src: url("../fonts/IBMPlexSerif-Medium.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSerif-MediumItalic.ttf";
+  src: url("../fonts/IBMPlexSerif-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSerif-Medium.ttf";
+  src: url("../fonts/IBMPlexSerif-Medium.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSerif-Regular.ttf";
+  src: url("../fonts/IBMPlexSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexSerif-Italic.ttf";
+  src: url("../fonts/IBMPlexSerif-Italic.ttf");
+}
+
+
+.font1 {
+  font-family: "IBMPlexSerif-Bold.ttf";
+  font-size: 40px;
+}
+
+.font2 {
+  font-family: "IBMPlexSerif-SemiBold.ttf";
+  font-size: 32px;
+}
+
+.font3 {
+  font-family: "IBMPlexSerif-Medium.ttf";
+  font-size: 24px;
+}
+
+.font3Italic {
+  font-family: "IBMPlexSerif-MediumItalic.ttf";
+  font-size: 24px;
+}
+
+.font4 {
+  font-family: "IBMPlexSerif-Regular.ttf";
+  font-size: 20px;
+}
+.font4Italic {
+  font-family: "IBMPlexSerif-Italic.ttf";
+  font-size: 20px;
+}
+
+.font5 {
+  font-family: "IBMPlexSerif-Regular.ttf";
   font-size: 16px;
 }
 
-h1 {
-  padding: 40px 0px;
-  margin: 0 auto;
-  font-size: 30px;
+.font5Italic {
+  font-family: "IBMPlexSerif-Italic.ttf";
+  font-size: 16px;
 }
+
+/* End of Fonts */
+
+/* Start of CSS Variables */
+  :root {
+    --black: hsl(0, 0%, 0%);
+    --blackhighlight: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --whitehighlight: hsl(0, 0%, 83%);
+    --grey: hsl(0, 0%, 81%);
+    --60: hsl(17, 50%, 40%);
+    --30: hsl(219, 100%, 73%);
+    --10: hsl(217, 100%, 35%);
+  }
+/* End of CSS Variables */
+
+/* Start of General CSS */
+.max-width {
+  max-width: 1400px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, button {
+  cursor: pointer;
+}
+
+/* End of General CSS */
+
+/* Start of Nav Section */
+
+.nav-container {
+  height: 140px;
+  width: 100%;
+  position: fixed;
+  background: var(--white);
+  z-index: 10;
+}
+
+  nav {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .logo {
+    height: 140px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+  }
+
+  nav li {
+    margin-right: 20px;
+  }
+
+  .nav-btn {
+    padding: 8px;
+  }
+
+  
+/* End of Nav Section */
+
+/* Start of Hero Section */
+.hero-image {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../images/vecteezy_background-of-soil-with-the-word-earth_2488015.jpeg");
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-inner {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+
+}
+
+.call-to-action {
+  margin-top: -500px;
+  margin-left: -400px;
+  position: absolute;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 800px;
+}
+
+.hero-inner h1 {
+  width: 100%;
+ color: var(--30);
+}
+
+label {
+  color: var(--10)
+}
+
+form input {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  width: 100%;
+}
+
+/* End of Hero Section */
+
+/* Start of Main Section */
+.main-section {
+  height: fit-content;
+  width: 100%;
+  padding: 40px 16px;
+}
+.main-section section {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.grid-images {
+  margin: 100px 0px 50px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.grid-images img {
+  height: 100%;
+  width: 100%;
+}
+
+.col-1 {
+  grid-column: 2;
+}
+
+.col-2 {
+  grid-column: 2;
+}
+/* End of Main Section */
+
+/* Start of Footer */
+.footer-container {
+  background-color: rgb(153, 138, 138);
+  height: 200px;
+  padding: 20px 16px;
+}
+
+footer {
+  flex-shrink: 0;
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer p, footer a {
+  color: var(--black);
+}
+
+footer a:hover {
+  color: var(--blackhighlight)
+}
+/* End of Footer */
