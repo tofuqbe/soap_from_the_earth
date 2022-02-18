@@ -28,72 +28,94 @@ body {
 /* End of Preset CSS */
 
 /* Start of Fonts */
+
+/* Serifs */
 @font-face {
-  font-family: "IBMPlexSerif-Bold.ttf";
+  font-family: "IBMPlexSerif-Bold";
   src: url("../fonts/IBMPlexSerif-Bold.ttf");
 }
 @font-face {
-  font-family: "IBMPlexSerif-SemiBold.ttf";
+  font-family: "IBMPlexSerif-SemiBold";
   src: url("../fonts/IBMPlexSerif-Medium.ttf");
 }
 
 @font-face {
-  font-family: "IBMPlexSerif-MediumItalic.ttf";
+  font-family: "IBMPlexSerif-MediumItalic";
   src: url("../fonts/IBMPlexSerif-MediumItalic.ttf");
 }
 
 @font-face {
-  font-family: "IBMPlexSerif-Medium.ttf";
+  font-family: "IBMPlexSerif-Medium";
   src: url("../fonts/IBMPlexSerif-Medium.ttf");
 }
 
 @font-face {
-  font-family: "IBMPlexSerif-Regular.ttf";
+  font-family: "IBMPlexSerif-Regular";
   src: url("../fonts/IBMPlexSerif-Regular.ttf");
 }
 
 @font-face {
-  font-family: "IBMPlexSerif-Italic.ttf";
+  font-family: "IBMPlexSerif-Italic";
   src: url("../fonts/IBMPlexSerif-Italic.ttf");
 }
 
+/* San Serifs */
+
+@font-face {
+  font-family: "IBMPlexSans-Medium";
+  src: url("../fonts/IBMPlexSans-Medium.ttf");
+}
+  @font-face {
+    font-family: "IBMPlexSans-Regular";
+    src: url("../fonts/IBMPlexSans-Regular.ttf");
+  }
 
 .font1 {
-  font-family: "IBMPlexSerif-Bold.ttf";
+  font-family: "IBMPlexSerif-Bold";
   font-size: 40px;
 }
 
 .font2 {
-  font-family: "IBMPlexSerif-SemiBold.ttf";
+  font-family: "IBMPlexSerif-SemiBold";
   font-size: 32px;
 }
 
 .font3 {
-  font-family: "IBMPlexSerif-Medium.ttf";
+  font-family: "IBMPlexSerif-Medium";
   font-size: 26px;
 }
 
 .font3Italic {
-  font-family: "IBMPlexSerif-MediumItalic.ttf";
+  font-family: "IBMPlexSerif-MediumItalic";
   font-size: 26px;
 }
 
 .font4 {
-  font-family: "IBMPlexSerif-Regular.ttf";
+  font-family: "IBMPlexSerif-Regular";
   font-size: 20px;
 }
 .font4Italic {
-  font-family: "IBMPlexSerif-Italic.ttf";
+  font-family: "IBMPlexSerif-Italic";
   font-size: 20px;
 }
 
 .font5 {
-  font-family: "IBMPlexSerif-Regular.ttf";
+  font-family: "IBMPlexSerif-Regular";
   font-size: 16px;
 }
 
 .font5Italic {
-  font-family: "IBMPlexSerif-Italic.ttf";
+  font-family: "IBMPlexSerif-Italic";
+  font-size: 16px;
+}
+
+.font4-sans {
+  font-family: "IBMPlexSans-Regular";
+  font-size: 20px;
+}
+
+.font5-sans {
+  font-family: "IBMPlexSans-Regular";
   font-size: 16px;
 }
 
@@ -108,7 +130,7 @@ body {
     --grey: hsl(30, 23%, 95%);
     --60: hsl(17, 50%, 40%);
     --30: hsl(219, 100%, 73%);
-    --10: hsl(258, 86%, 86%);
+    --10: hsl(216, 100%, 35%);
   }
 /* End of CSS Variables */
 
@@ -189,12 +211,14 @@ a:hover, button {
 
 /* Start of Hero Section */
 .hero-image {
+  margin-top: 140px;
   width: 100%;
   height: calc(100vh - 140px);
   background-image: url("../images/vecteezy_background-of-soil-with-the-word-earth_2488015.jpeg");
   background-position-y: 35%;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .hero-inner {
@@ -210,18 +234,23 @@ a:hover, button {
   padding: 8vmin 16px;
   border-radius: 8px;
   margin: 0px 16px;
-  background-color: var(--white)
+  background-color: var(--white);
+
+
+
+
+
 }
 
 .hero-inner h1 {
   width: 100%;
- color: var(--30);
- margin-bottom: 20px;
+  color: var(--30);
+  padding-bottom: 20px;
 }
 
 label {
   display: block;
-  color: var(--black);
+  color: hsl(0, 0%, 35%);
 }
 
 form input {
@@ -232,6 +261,14 @@ form input {
   width: 100%;
   margin-top: 5px;
   transition: border 300ms ease-in-out;
+  font-family: "IBMPlexSans-Regular";
+  font-size: 16px;
+}
+
+::placeholder {
+
+  font-family: "IBMPlexSans-Regular";
+  font-size: 16px;
 }
 
 form input:focus {
