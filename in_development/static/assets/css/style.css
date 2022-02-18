@@ -13,12 +13,11 @@ html {
 
 body {
   color: #363636;
-  font-size: 16px;
+
   height: 100%;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  padding-top: 140px; 
 }
 
 .content {
@@ -71,12 +70,12 @@ body {
 
 .font3 {
   font-family: "IBMPlexSerif-Medium.ttf";
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .font3Italic {
   font-family: "IBMPlexSerif-MediumItalic.ttf";
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .font4 {
@@ -130,7 +129,9 @@ a:hover, button {
 /* End of General CSS */
 
 /* Start of Animations */
-  /* Create hover effect on email subscribe. */
+  form input:hover{
+    border: 1px solid var(--black)
+  }
 /* End of Animations */
 
 /* Start of Nav Section */
@@ -176,6 +177,7 @@ a:hover, button {
     color: white;
     background-color: hsla(17, 50%, 40%, 0.9);
     transition: background-color 200ms ease-in-out;
+    border-radius: 4px;
   }
 
   .nav-btn:hover {
@@ -188,7 +190,7 @@ a:hover, button {
 /* Start of Hero Section */
 .hero-image {
   width: 100%;
-  height: calc(80vh - 140px);
+  height: calc(100vh - 140px);
   background-image: url("../images/vecteezy_background-of-soil-with-the-word-earth_2488015.jpeg");
   background-position-y: 35%;
   background-repeat: no-repeat;
@@ -197,19 +199,18 @@ a:hover, button {
 
 .hero-inner {
   position: relative;
-  top: 13vmin;
-  width: 70vmin;
-  padding: 4vmax 16px;
-  background-color: white;
-  border-radius: 12px;
-  margin: 0 auto;
-
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .call-to-action {
-  padding: 20px 40px;
-  border-radius: 12px;
-  background-color: rgb(255, 255, 255);
+  height: fit-content;
+  padding: 8vmin 16px;
+  border-radius: 8px;
+  margin: 0px 16px;
+  background-color: var(--white)
 }
 
 .hero-inner h1 {
@@ -219,14 +220,22 @@ a:hover, button {
 }
 
 label {
-  color: var(--black)
+  display: block;
+  color: var(--black);
 }
 
 form input {
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
   border-radius: 4px;
-  padding: 4px;
+  background-color: var(--grey);
+  padding: 8px 4px;
   width: 100%;
+  margin-top: 5px;
+  transition: border 300ms ease-in-out;
+}
+
+form input:focus {
+outline: none;
 }
 
 /* End of Hero Section */
@@ -235,12 +244,17 @@ form input {
 .main-section {
   height: fit-content;
   width: 100%;
-  padding: 40px 0px;
   color: var(--black);
 }
 .main-section section {
   margin: 0 auto;
-  height: 300px;
+  min-height: 320px;
+  max-height: fit-content;
+  padding: 16px;
+}
+
+.main-section section h2 {
+  margin-top: 0px;
 }
 
 .grid-images-container {
@@ -250,7 +264,7 @@ form input {
 }
 
 .grid-text {
-  padding: 80px 16px;
+  padding: 0px 16px;
 }
 
 .grid-text h3 {
@@ -266,6 +280,7 @@ form input {
   padding: 0px 16px;
   background-color: var(--white);
   margin: 0 auto;
+  align-items: center;
 }
 
 .grid-images img {
@@ -285,14 +300,15 @@ form input {
 /* Start of Footer */
 .footer-container {
   background-color: hsla(17, 50%, 60%, 0.9);
-  height: 200px;
+  height: fit-content;
   padding: 20px 16px;
+  margin-top: -100px;
 }
 
 footer {
   flex-shrink: 0;
-
   margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
 }
@@ -309,3 +325,35 @@ footer a:hover {
   color: var(--blackhighlight)
 }
 /* End of Footer */
+
+/* Start of Media Queries */
+@media screen and (max-width: 850px) {
+  .grid-images {
+    grid-template-columns: 1fr;
+    column-gap: unset;
+  }
+
+  .col-2 {
+    grid-column: 1;
+  }
+
+  .grid-images img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav li {
+   margin-bottom: 5px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/* end of Media Queries */
